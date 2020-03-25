@@ -1,6 +1,8 @@
 def hello_t(array)
   i = 0
-
+if array.empty?
+  return "hey thas empty"
+else
   while i < array.length
     yield array[i]
     i = i + 1
@@ -9,10 +11,8 @@ array
 end
 # call your method here!
 
-hello_t(array = ["Tim", "Tom", "Jim"]) do |name|
-  if array.empty?
-    puts "empty"
-  elsif name.start_with?("T")
+hello_t(["Tim", "Tom", "Jim"]) do |name|
+  if name.start_with?("T")
     puts "Hi, #{name}"
   end
 end
