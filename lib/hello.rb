@@ -1,7 +1,7 @@
 def hello_t(array)
   i = 0
-if array.empty?
-  return "hey that's empty"
+if !block_given?
+  return "Hey! No block was given!"
 else
   while i < array.length
     yield array[i]
