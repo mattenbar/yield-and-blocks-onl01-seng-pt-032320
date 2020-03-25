@@ -1,7 +1,7 @@
 def hello_t(array)
   i = 0
 if array.empty?
-  return "hey thas empty"
+  return "hey that's empty"
 else
   while i < array.length
     yield array[i]
