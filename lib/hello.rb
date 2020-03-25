@@ -9,9 +9,9 @@ array
 end
 # call your method here!
 
-hello_t(array) do |name|
+hello_t(array = ["Tim", "Tom", "Jim"]) do |name|
   if array.empty?
-    puts "hey you didnt pass a block"
+    puts "empty"
   elsif name.start_with?("T")
     puts "Hi, #{name}"
   end
